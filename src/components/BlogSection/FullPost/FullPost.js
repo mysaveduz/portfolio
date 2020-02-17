@@ -75,7 +75,12 @@ class FullPost extends Component {
              fontSize="100%"
              config={this.state.objectPostLoaded.config}/>
            <h5>{this.state.objectPostLoaded.post.title}</h5>
-           <p className="post-content">{this.state.objectPostLoaded.post.content}</p>
+           <p className="post-content">{this.state.objectPostLoaded.post.content.split('\n').map(item =>(
+                                                       <span>
+                                                         {item}
+                                                         <br/>
+                                                       </span>
+                                                     ) )}</p>
 
       </div>);
 

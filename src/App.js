@@ -4,6 +4,7 @@ import loadable from '@loadable/component'
 
 import './App.css';
 import Layout from './hoc/Layout/Layout';
+import Newpost from './components/BlogSection/Newpost/Newpost';
 
 const Main = loadable(() => import('./containers/Main/Main'));
 const About = loadable(() => import('./containers/About/About'));
@@ -31,6 +32,7 @@ class App extends Component {
           <Route exact path="/about-me" render={() =>
              <Fragment>
                 <About />
+                <Newpost />
                 <Bottom />
              </Fragment>}/>
              <Route path="/my-blog"  component={Blog}/>
